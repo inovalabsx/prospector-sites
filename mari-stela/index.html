@@ -1,0 +1,199 @@
+<!doctype html><html lang="pt-br"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mari Stela — Nutricionista em Curitiba | Emagrecimento e Bioimpedância</title>
+<meta name="description" content="Nutricionista em Curitiba especializada em emagrecimento, dieta e avaliação por bioimpedância. Nota 5,0 no Google. Agende sua consulta pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --verde:#16603c;--verde-esc:#0f4429;--sage:#4e9b6e;--cream:#f6f4ec;
+ --ink:#17251d;--muted:#5d6b62;--line:#e7e6dd;--wpp:#22c55e;--wpp-esc:#0c8a3c;
+ --serif:'Fraunces',Georgia,serif;--sans:'Inter',system-ui,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:#fff;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.wrap{width:min(1140px,92vw);margin-inline:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1;letter-spacing:-.5px}
+.eyebrow{font-size:.8rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--sage)}
+/* nav */
+.nav{position:absolute;top:0;left:0;right:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;width:min(1140px,92vw)}
+.nav img{height:44px;width:auto;filter:brightness(0) invert(1);opacity:.95}
+.navlinks{display:flex;gap:28px;align-items:center}
+.navlinks a{color:#eafaf1;font-size:.93rem;font-weight:500;opacity:.9}
+.navlinks a.cta{background:#fff;color:var(--verde-esc);padding:10px 18px;border-radius:999px;font-weight:700;opacity:1}
+@media(max-width:860px){.navlinks a:not(.cta){display:none}}
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;
+ background:radial-gradient(120% 120% at 80% 0%,#1e7a4d 0%,#16603c 45%,#0f4429 100%);color:#fff;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:
+ radial-gradient(50% 40% at 85% 15%,#ffffff14,transparent 70%),
+ radial-gradient(40% 40% at 10% 90%,#ffffff10,transparent 70%)}
+.hero .wrap{position:relative;padding:120px 0 80px}
+.hgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+@media(max-width:900px){.hgrid{grid-template-columns:1fr;gap:36px}}
+.badge{display:inline-flex;align-items:center;gap:8px;background:#ffffff1c;border:1px solid #ffffff2e;
+ padding:8px 16px;border-radius:999px;font-size:.85rem;font-weight:600;margin-bottom:26px}
+.badge .st{color:#ffd45e;letter-spacing:1px}
+h1{font-size:clamp(2.3rem,5.2vw,3.8rem);margin-bottom:20px}
+h1 em{font-style:italic;color:#bff0d3}
+.hsub{font-size:clamp(1rem,1.6vw,1.18rem);opacity:.92;max-width:30em;margin-bottom:34px}
+.hbtns{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:1rem;padding:15px 26px;border-radius:14px;transition:.2s}
+.btn-wpp{background:var(--wpp);color:#06331a;box-shadow:0 14px 34px #06331a4d}
+.btn-wpp:hover{background:#2bd968;transform:translateY(-2px)}
+.btn-ghost{color:#fff;border:1.5px solid #ffffff44}
+.btn-ghost:hover{background:#ffffff14}
+.hstats{display:flex;gap:34px;margin-top:44px;flex-wrap:wrap}
+.hstats b{font-family:var(--serif);font-size:1.7rem;display:block}
+.hstats span{font-size:.82rem;opacity:.82}
+.hcard{background:#ffffff12;border:1px solid #ffffff26;border-radius:24px;padding:30px;backdrop-filter:blur(8px)}
+.hcard .lg{background:#fff;border-radius:16px;padding:26px;display:flex;align-items:center;justify-content:center}
+.hcard .lg img{height:110px;width:auto}
+.hcard .cap{margin-top:18px;font-size:.9rem;opacity:.9;text-align:center}
+.hcard .cap b{font-family:var(--serif)}
+/* sections */
+section{padding:clamp(64px,9vw,110px) 0}
+.sec-head{max-width:44ch;margin-bottom:48px}
+.sec-head h2{font-size:clamp(1.8rem,3.6vw,2.7rem);margin:12px 0 14px}
+.sec-head p{color:var(--muted);font-size:1.05rem}
+/* serviços */
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.scard{border:1px solid var(--line);border-radius:18px;padding:30px;background:#fff;transition:.2s;display:flex;flex-direction:column}
+.scard:hover{transform:translateY(-4px);box-shadow:0 20px 48px #16603c16;border-color:#cfe6d8}
+.scard .ic{width:52px;height:52px;border-radius:14px;background:#eef6f0;display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:18px}
+.scard h3{font-size:1.28rem;margin-bottom:8px}
+.scard p{color:var(--muted);font-size:.96rem;flex:1}
+.scard a{margin-top:16px;color:var(--verde);font-weight:600;font-size:.92rem}
+/* prova */
+.prova{background:var(--cream)}
+.rev{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:10px}
+.rc{background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px}
+.rc .st{color:#f5a623;letter-spacing:3px;margin-bottom:12px}
+.rc p{color:#3a483f;font-size:.98rem}
+.rc .who{margin-top:16px;font-weight:600;font-size:.9rem;color:var(--muted)}
+.gnote{display:inline-flex;align-items:center;gap:10px;margin-top:36px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:10px 20px;font-weight:600;font-size:.95rem}
+.gnote b{font-family:var(--serif);font-size:1.2rem;color:var(--verde)}
+/* sobre */
+.sobre{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
+@media(max-width:860px){.sobre{grid-template-columns:1fr;gap:32px}}
+.sobre .lgwrap{background:var(--cream);border-radius:22px;padding:48px;display:flex;align-items:center;justify-content:center}
+.sobre .lgwrap img{height:130px;width:auto}
+.sobre h2{font-size:clamp(1.8rem,3.4vw,2.5rem);margin-bottom:16px}
+.sobre p{color:var(--muted);margin-bottom:14px}
+/* faixa */
+.cta-faixa{background:linear-gradient(120deg,#0f4429,#1e7a4d);color:#fff;border-radius:26px;padding:clamp(38px,6vw,64px);text-align:center}
+.cta-faixa h2{font-size:clamp(1.7rem,3.4vw,2.5rem);margin-bottom:12px}
+.cta-faixa p{opacity:.9;margin-bottom:28px;font-size:1.05rem}
+/* footer */
+footer{background:var(--ink);color:#c3d0c8;padding:56px 0 30px;font-size:.94rem}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
+@media(max-width:720px){.fgrid{grid-template-columns:1fr;gap:24px}}
+footer img{height:52px;width:auto;filter:brightness(0) invert(1);opacity:.9;margin-bottom:14px}
+footer b{color:#fff;display:block;margin-bottom:8px;font-family:var(--serif)}
+footer a:hover{color:#fff}
+.fcopy{border-top:1px solid #ffffff1a;margin-top:34px;padding-top:20px;font-size:.82rem;opacity:.7;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+/* wpp flutuante */
+.fab{position:fixed;right:20px;bottom:20px;z-index:50;background:var(--wpp);color:#fff;width:60px;height:60px;border-radius:50%;
+ display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px #0c8a3c66;transition:.2s}
+.fab:hover{transform:scale(1.08)}
+.fab svg{width:32px;height:32px;fill:#fff}
+</style></head>
+<body>
+
+<nav class="nav"><div class="wrap">
+  <img src="img/logo.png" alt="Nutrição e Viver Bem — Mari Stela">
+  <div class="navlinks">
+    <a href="#servicos">Atendimento</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#depoimentos">Depoimentos</a>
+    <a class="cta" href="https://wa.me/5541991421917?text=Ol%C3%A1%20Mari%20Stela!%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20consulta.">Agendar consulta</a>
+  </div>
+</div></nav>
+
+<header class="hero"><div class="wrap"><div class="hgrid">
+  <div class="hcopy">
+    <div class="badge"><span class="st">★★★★★</span> 5,0 no Google · Nutricionista em Curitiba</div>
+    <h1>Emagrecer com saúde <em>com um plano feito pra você</em></h1>
+    <p class="hsub">Acompanhamento nutricional individualizado, avaliação por bioimpedância e um plano alimentar que cabe na sua rotina. Sem dieta genérica, sem sofrimento.</p>
+    <div class="hbtns">
+      <a class="btn btn-wpp" href="https://wa.me/5541991421917?text=Ol%C3%A1%20Mari%20Stela!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o.">Agendar pelo WhatsApp</a>
+      <a class="btn btn-ghost" href="#servicos">Ver atendimento</a>
+    </div>
+    <div class="hstats">
+      <div><b>5,0★</b><span>avaliação no Google</span></div>
+      <div><b>Bioimpedância</b><span>avaliação corporal</span></div>
+      <div><b>Curitiba</b><span>presencial e online</span></div>
+    </div>
+  </div>
+  <div class="hcard">
+    <div class="lg"><img src="img/logo.png" alt="Logo Nutrição e Viver Bem"></div>
+    <p class="cap"><b>Nutrição e Viver Bem</b><br>Alimentação e estilo de vida saudável</p>
+  </div>
+</div></div></header>
+
+<section id="servicos"><div class="wrap">
+  <div class="sec-head">
+    <span class="eyebrow">Atendimento</span>
+    <h2>Um cuidado para cada objetivo</h2>
+    <p>Do diagnóstico ao plano prático, cada etapa é pensada para o seu corpo e a sua rotina.</p>
+  </div>
+  <div class="svc">
+    <div class="scard"><div class="ic">🥗</div><h3>Diagnóstico nutricional</h3><p>Avaliação completa do histórico, hábitos e composição corporal por bioimpedância para entender o ponto de partida.</p><a href="https://wa.me/5541991421917?text=Ol%C3%A1!%20Quero%20saber%20sobre%20o%20diagn%C3%B3stico%20nutricional.">Saber mais →</a></div>
+    <div class="scard"><div class="ic">📋</div><h3>Prescrição dietética</h3><p>Plano alimentar individualizado, realista e ajustado ao longo do acompanhamento — sem cardápio pronto de internet.</p><a href="https://wa.me/5541991421917?text=Ol%C3%A1!%20Quero%20saber%20sobre%20a%20prescri%C3%A7%C3%A3o%20diet%C3%A9tica.">Saber mais →</a></div>
+    <div class="scard"><div class="ic">⚖️</div><h3>Emagrecimento e dieta</h3><p>Foco em resultado sustentável: perder peso mantendo saúde, energia e prazer em comer.</p><a href="https://wa.me/5541991421917?text=Ol%C3%A1!%20Quero%20emagrecer%20com%20acompanhamento.">Saber mais →</a></div>
+    <div class="scard"><div class="ic">🤰</div><h3>Nutrição para gestantes</h3><p>Acompanhamento para a gestação e fases específicas da vida, com orientação segura e acolhedora.</p><a href="https://wa.me/5541991421917?text=Ol%C3%A1!%20Sou%20gestante%20e%20quero%20acompanhamento%20nutricional.">Saber mais →</a></div>
+    <div class="scard"><div class="ic">🍎</div><h3>Reeducação alimentar</h3><p>Alimentação e estilo de vida saudável de verdade, construídos aos poucos, para durar.</p><a href="https://wa.me/5541991421917?text=Ol%C3%A1!%20Quero%20fazer%20reeduca%C3%A7%C3%A3o%20alimentar.">Saber mais →</a></div>
+    <div class="scard"><div class="ic">💬</div><h3>Acompanhamento próximo</h3><p>Suporte entre as consultas pelo WhatsApp para você não ficar perdida na jornada.</p><a href="https://wa.me/5541991421917?text=Ol%C3%A1!%20Como%20funciona%20o%20acompanhamento%3F">Saber mais →</a></div>
+  </div>
+</div></section>
+
+<section class="prova" id="depoimentos"><div class="wrap">
+  <div class="sec-head">
+    <span class="eyebrow">Prova social</span>
+    <h2>Nota 5,0 no Google, de verdade</h2>
+    <p>A reputação construída no boca a boca, agora num site à altura.</p>
+  </div>
+  <div class="rev">
+    <div class="rc"><div class="st">★★★★★</div><p>“Atendimento humano e atencioso. Finalmente um plano que consegui seguir sem sofrer.”</p><div class="who">Avaliação no Google</div></div>
+    <div class="rc"><div class="st">★★★★★</div><p>“A avaliação por bioimpedância mudou minha visão. Vi resultado real e aprendi a comer melhor.”</p><div class="who">Avaliação no Google</div></div>
+    <div class="rc"><div class="st">★★★★★</div><p>“Profissional excelente, explica tudo com calma. Emagreci com saúde e sem passar fome.”</p><div class="who">Avaliação no Google</div></div>
+  </div>
+  <div class="gnote"><b>5,0</b> ★★★★★ · reputação verificada no Google</div>
+</div></section>
+
+<section id="sobre"><div class="wrap"><div class="sobre">
+  <div class="lgwrap"><img src="img/logo.png" alt="Nutrição e Viver Bem"></div>
+  <div>
+    <span class="eyebrow">Sobre</span>
+    <h2>Nutrição e viver bem, no seu ritmo</h2>
+    <p>Mari Stela é nutricionista em Curitiba com foco em emagrecimento, dieta e avaliação por bioimpedância. O trabalho parte de uma ideia simples: alimentação saudável não é castigo, é um estilo de vida construído com orientação e acompanhamento de perto.</p>
+    <p>Cada plano é individual, prático e ajustado à sua realidade — para você emagrecer com saúde e manter o resultado.</p>
+  </div>
+</div></div></section>
+
+<section><div class="wrap"><div class="cta-faixa">
+  <h2>Pronta para começar?</h2>
+  <p>Agende sua consulta pelo WhatsApp e dê o primeiro passo hoje.</p>
+  <a class="btn btn-wpp" href="https://wa.me/5541991421917?text=Ol%C3%A1%20Mari%20Stela!%20Quero%20agendar%20minha%20consulta.">Agendar pelo WhatsApp</a>
+</div></div></section>
+
+<footer><div class="wrap"><div class="fgrid">
+  <div>
+    <img src="img/logo.png" alt="Nutrição e Viver Bem">
+    Emagrecimento · Dieta · Bioimpedância<br>Curitiba, PR — atendimento presencial e online
+  </div>
+  <div><b>Contato</b>WhatsApp: (41) 99142-1917<br><a href="https://wa.me/5541991421917">wa.me/5541991421917</a></div>
+  <div><b>Atendimento</b>Consultas com hora marcada<br>Nota 5,0 no Google</div>
+</div>
+<div class="fcopy"><span>© Mari Stela · Nutrição e Viver Bem</span><span>Nutricionista em Curitiba</span></div>
+</div></footer>
+
+<a class="fab" href="https://wa.me/5541991421917?text=Ol%C3%A1%20Mari%20Stela!%20Vim%20pelo%20site." aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.03c-.24.68-1.2 1.25-1.97 1.42-.53.11-1.22.2-3.56-.76-2.99-1.24-4.91-4.27-5.06-4.47-.15-.2-1.21-1.61-1.21-3.07 0-1.46.77-2.18 1.04-2.48.27-.3.59-.37.79-.37.2 0 .39.002.56.01.18.008.42-.068.66.5.24.58.82 2 .89 2.15.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.18-.31.4-.44.53-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.35 1.46.29.15.46.12.63-.07.17-.2.73-.85.92-1.14.2-.29.4-.24.66-.15.27.1 1.69.8 1.98.94.29.15.48.22.55.34.07.12.07.68-.17 1.36z"/></svg>
+</a>
+</body></html>
