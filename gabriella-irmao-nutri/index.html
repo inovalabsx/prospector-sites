@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gabriella Irmão | Nutricionista, Centro, Florianópolis</title>
+<meta name="description" content="Gabriella Irmão, nutricionista no Centro de Florianópolis. Consulta personalizada, atenciosa e sem julgamento, com foco na sua relação com a comida.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#2a221e;--ink-soft:#6b5d54;--paper:#faf7f4;--paper-alt:#f2e6de;--line:#e7d7cb;
+    --brand:#b8735a;--brand-dark:#7d4a37;--accent:#6b8a5a;--accent-soft:#e3ecdd;--wa:#25d366;
+    --radius:16px;--shadow:0 12px 32px -12px rgba(42,34,30,.2);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',-apple-system,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,h4{font-family:'Fraunces',serif;font-weight:600;color:var(--ink);line-height:1.15;letter-spacing:-.01em}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+  section{padding:clamp(56px,9vw,120px) 0}
+  .kicker{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+  .faixa{background:var(--brand);color:#fff;padding:.9rem 0;overflow:hidden}
+  .marquee{display:flex;gap:0;width:max-content;animation:rolar 60s linear infinite}
+  .marquee span{display:inline-flex;align-items:center;gap:2.6rem;white-space:nowrap;font-weight:600;font-size:.94rem;letter-spacing:.02em}
+  @keyframes rolar{to{transform:translateX(-12.5%)}}
+  @media(prefers-reduced-motion:reduce){.marquee{animation:none}}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 30px;border-radius:100px;font-weight:600;font-size:15px;transition:.2s;white-space:nowrap}
+  .btn-primary{background:var(--wa);color:#fff;box-shadow:0 8px 20px -6px rgba(37,211,102,.5)}
+  .btn-primary:hover{background:#1fb955;transform:translateY(-2px)}
+  .btn-cta{position:relative;overflow:hidden}
+  @media(prefers-reduced-motion:no-preference){.btn-cta{animation:ctaGlow 4.5s ease-in-out infinite}.btn-cta:hover{animation-play-state:paused}}
+  @keyframes ctaGlow{0%,100%{box-shadow:0 8px 20px -6px rgba(37,211,102,.5)}50%{box-shadow:0 12px 30px -6px rgba(37,211,102,.75)}}
+  .btn-cta::before{content:'';position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-18deg);transition:left .6s ease;pointer-events:none}
+  .btn-cta:hover::before{left:130%}
+  .btn-outline{border:1.5px solid var(--brand);color:var(--brand-dark)}
+  .btn-outline:hover{background:var(--brand);color:#fff}
+  .cta-sub{font-size:13px;color:var(--ink-soft);margin-top:10px}
+
+  header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,247,244,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);transition:box-shadow .35s ease}
+  header.scrolled{box-shadow:0 10px 30px -20px rgba(0,0,0,.25)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1180px;margin:0 auto}
+  .brand{display:flex;align-items:center;gap:10px;font-family:'Fraunces',serif;font-weight:600;font-size:18px}
+  nav.links{display:flex;gap:32px;font-size:14px;font-weight:500}
+  nav.links a:hover{color:var(--brand-dark)}
+  .nav-cta .btn{padding:11px 22px;font-size:14px}
+  @media(max-width:820px){nav.links{display:none}}
+
+  .hero{padding-top:calc(78px + clamp(48px,8vw,90px));position:relative;background:linear-gradient(180deg,var(--paper-alt) 0%,var(--paper) 60%)}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+  @media(max-width:900px){
+    .hero-grid{grid-template-columns:1fr;gap:40px}
+    .hero-grid>div:first-child{display:contents}
+    .hero .kicker{order:1} .hero h1{order:2} .hero p.lead{order:3}
+    .hero-photo{order:4} .hero-actions{order:5} .hero .cta-sub{order:6}
+  }
+  .hero h1{font-size:clamp(30px,4.4vw,50px)}
+  .hero p.lead{font-size:clamp(16px,1.6vw,19px);color:var(--ink-soft);margin:20px 0 30px;max-width:54ch}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+  .hero-photo{position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/5}
+  .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .5s ease,filter .35s ease}
+  .hero-photo:hover{box-shadow:0 20px 46px -14px rgba(184,115,90,.5),var(--shadow)}
+  .hero-photo:hover img{transform:scale(1.045);filter:saturate(1.12) brightness(1.03)}
+  .badge-float{position:absolute;left:-38px;bottom:24px;background-color:#fff;background-image:radial-gradient(circle at 1px 1px,rgba(0,0,0,.04) 1px,transparent 0);background-size:9px 9px;border-radius:14px;padding:14px 18px;box-shadow:var(--shadow),inset 0 1px 0 rgba(255,255,255,.7);display:flex;gap:12px;align-items:center;max-width:260px}
+  @media(max-width:900px){.badge-float{left:-12px}}
+  .badge-float .stars{color:var(--accent);display:inline-flex;gap:2px}
+  .badge-float strong{display:block;font-size:16px}
+  .badge-float span{font-size:12px;color:var(--ink-soft)}
+  @keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+  @media(prefers-reduced-motion:no-preference){.hero-photo,.about-photo{animation:floatY 5.5s ease-in-out infinite}.about-photo{animation-delay:.4s}.hero-photo:hover,.about-photo:hover{animation-play-state:paused}}
+
+  .social-proof{background:var(--brand-dark);color:#f2e6de}
+  .social-proof .wrap{display:grid;grid-template-columns:.7fr 1.3fr;gap:48px;align-items:center}
+  @media(max-width:820px){.social-proof .wrap{grid-template-columns:1fr}}
+  .rating-block{text-align:center;background:rgba(255,255,255,.07);border-radius:20px;padding:36px 24px;border:1px solid rgba(255,255,255,.12)}
+  .rating-block .num{font-family:'Fraunces',serif;font-size:56px;font-weight:600}
+  .rating-block .stars{color:var(--accent-soft);display:flex;justify-content:center;gap:4px;margin:6px 0}
+  .rating-block p{color:#d9c2b5;font-size:14px}
+  .quote{font-size:clamp(18px,2vw,24px);font-family:'Fraunces',serif;font-style:italic;line-height:1.5}
+  .quote span{display:block;margin-top:16px;font-family:'Inter',sans-serif;font-style:normal;font-size:14px;color:#b4998c}
+
+  .pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+  @media(max-width:900px){.pillars-grid{grid-template-columns:1fr}}
+  .pillar-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px 28px;transition:.25s}
+  .pillar-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:transparent}
+  .pillar-card .icon{width:56px;height:56px;border-radius:14px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;color:var(--brand-dark);margin-bottom:14px}
+  .pillar-card h3{font-size:19px;margin-bottom:8px}
+  .pillar-card p{color:var(--ink-soft);font-size:14.5px}
+
+  .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
+  @media(max-width:900px){.about-grid{grid-template-columns:1fr}}
+  .about-photo{position:relative;border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
+  .about-photo img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease,filter .35s ease}
+  .about-photo:hover{box-shadow:0 20px 46px -14px rgba(184,115,90,.5),var(--shadow)}
+  .about-photo:hover img{transform:scale(1.045);filter:saturate(1.12) brightness(1.03)}
+  .info-row{display:flex;gap:14px;align-items:flex-start;margin-bottom:16px}
+  .info-row .ic{width:40px;height:40px;border-radius:10px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--brand-dark)}
+  .info-row b{display:block;font-size:14px}
+  .info-row span{font-size:14px;color:var(--ink-soft)}
+
+  .testi-marquee{overflow:hidden;margin-top:48px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}
+  .testi-track{display:flex;gap:20px;width:max-content;animation:rolarTesti 42s linear infinite}
+  .testi-track:hover{animation-play-state:paused}
+  @keyframes rolarTesti{to{transform:translateX(-33.3333%)}}
+  @media(prefers-reduced-motion:reduce){.testi-track{animation:none;flex-wrap:wrap;width:100%}}
+  .testi-card{width:340px;flex:0 0 auto;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+  .testi-card p{font-size:14px;color:var(--ink-soft);margin-bottom:14px}
+  .testi-card b{font-size:14px}
+  .testi-card .stars{color:var(--accent);display:flex;gap:2px;margin-bottom:10px}
+
+  .amen-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+  @media(max-width:700px){.amen-grid{grid-template-columns:1fr 1fr}}
+  .amen{display:flex;gap:10px;align-items:center;font-size:13.5px;color:var(--ink-soft);background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+  .amen svg{flex-shrink:0;color:var(--brand-dark)}
+
+  .hours-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px 24px;margin-top:16px;max-width:360px}
+  .hours-grid div{display:flex;justify-content:space-between;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line)}
+  .hours-grid b{color:var(--ink-soft);font-weight:500}
+
+  .loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:stretch}
+  @media(max-width:900px){.loc-grid{grid-template-columns:1fr}}
+  .loc-info{display:flex;flex-direction:column;gap:22px}
+  .map-wrap{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);min-height:320px}
+  .map-wrap iframe{width:100%;height:100%;min-height:320px;border:0}
+
+  .faq-item{border-bottom:1px solid var(--line);padding:22px 0}
+  .faq-item summary{cursor:pointer;font-weight:600;font-size:16px;display:flex;justify-content:space-between;align-items:center;list-style:none}
+  .faq-item summary::-webkit-details-marker{display:none}
+  .faq-item summary::after{content:'+';font-size:22px;color:var(--brand-dark);font-weight:400}
+  .faq-item[open] summary::after{content:'\2013'}
+  .faq-item p{margin-top:12px;color:var(--ink-soft);font-size:14.5px;max-width:70ch}
+
+  .cta-final{background:var(--brand-dark);color:#fff;text-align:center;border-radius:28px;max-width:1180px;margin:0 auto clamp(56px,8vw,96px);padding:clamp(48px,7vw,80px) 24px}
+  .cta-final h2{color:#fff}
+  .cta-final p{color:#e7d7cb;margin:16px auto 30px;max-width:50ch}
+
+  footer{background:#231b16;color:#d9c2b5;padding:56px 0 28px}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px}
+  @media(max-width:700px){.foot-grid{grid-template-columns:1fr}}
+  .foot-brand{display:flex;align-items:center;gap:10px;font-family:'Fraunces',serif;font-size:18px;color:#fff;margin-bottom:12px}
+  footer h4{color:#fff;font-family:'Inter',sans-serif;font-size:13px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px}
+  footer a{font-size:14px;color:#d9c2b5;display:block;margin-bottom:9px}
+  footer a:hover{color:#fff}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:36px;padding-top:22px;font-size:12.5px;color:#9c8577;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+  .wa-float{position:fixed;bottom:22px;right:22px;background:var(--wa);color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px -6px rgba(37,211,102,.6);z-index:90;opacity:0;transform:scale(0)}
+  @keyframes wa-pop{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+  @media(prefers-reduced-motion:no-preference){.wa-float{animation:wa-pop .5s ease 1.4s both}}
+  @media(prefers-reduced-motion:reduce){.wa-float{opacity:1;transform:scale(1)}}
+  .wa-float:hover{transform:scale(1.06)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="#" class="brand">Gabriella Irmão</a>
+    <nav class="links">
+      <a href="#servicos">Como atendo</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#local">Local</a>
+      <a href="#faq">Dúvidas</a>
+    </nav>
+    <div class="nav-cta"><a class="btn btn-primary" href="https://wa.me/5548991111597?text=Ol%C3%A1%2C%20Gabriella!%20Vim%20pelo%20Google%20e%20quero%20agendar%20uma%20consulta" target="_blank" rel="noopener">WhatsApp</a></div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="kicker">Nutrição Personalizada · Centro, Florianópolis</p>
+      <h1>Uma consulta que parece uma boa conversa, sem julgamento</h1>
+      <p class="lead">Atendimento atencioso e totalmente personalizado, olhando para cada detalhe da sua rotina e da sua relação com a comida, sem fórmulas prontas.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-cta" href="https://wa.me/5548991111597?text=Ol%C3%A1%2C%20Gabriella!%20Vim%20pelo%20Google%20e%20quero%20agendar%20uma%20consulta" target="_blank" rel="noopener">Agendar consulta</a>
+        <a class="btn btn-outline" href="#sobre">Conhecer o atendimento</a>
+      </div>
+      <p class="cta-sub">Resposta em poucos minutos · Empresa de empreendedoras</p>
+    </div>
+    <div class="hero-photo">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl56LzQzET2YwLB6k2MAKZ8brOMOD9_IzZUzhxduUdfjqjblH_OzC7xAxLLa3DxhhV9Ny06RoMQ8uKnPeTP56Efhij5ObvqLkchotpEtmmFnVvVcVFueQESSFFInTXX3LswheraTJ7o1C8=w1200" alt="Gabriella Irmão, nutricionista em Florianópolis">
+      <div class="badge-float">
+        <span class="stars"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2.5l2.9 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z" opacity=".4"/></svg></span>
+        <div><strong>4,8 · 55 avaliações</strong><span>no Google</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="faixa" aria-hidden="true">
+  <div class="marquee">
+    <span>Consulta personalizada &#10022; Sem julgamento &#10022; Qualidade de vida &#10022; Acolhimento &#10022;</span>
+    <span>Consulta personalizada &#10022; Sem julgamento &#10022; Qualidade de vida &#10022; Acolhimento &#10022;</span>
+    <span>Consulta personalizada &#10022; Sem julgamento &#10022; Qualidade de vida &#10022; Acolhimento &#10022;</span>
+    <span>Consulta personalizada &#10022; Sem julgamento &#10022; Qualidade de vida &#10022; Acolhimento &#10022;</span>
+    <span>Consulta personalizada &#10022; Sem julgamento &#10022; Qualidade de vida &#10022; Acolhimento &#10022;</span>
+    <span>Consulta personalizada &#10022; Sem julgamento &#10022; Qualidade de vida &#10022; Acolhimento &#10022;</span>
+    <span>Consulta personalizada &#10022; Sem julgamento &#10022; Qualidade de vida &#10022; Acolhimento &#10022;</span>
+    <span>Consulta personalizada &#10022; Sem julgamento &#10022; Qualidade de vida &#10022; Acolhimento &#10022;</span>
+  </div>
+</div>
+
+<section class="social-proof">
+  <div class="wrap">
+    <div class="rating-block">
+      <div class="num">4,8</div>
+      <div class="stars"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z" opacity=".4"/></svg></div>
+      <p>55 avaliações no Google</p>
+    </div>
+    <div class="quote">"É como estar batendo papo leve e descontraído com uma amiga, onde nos sentimos seguras em poder trazer todos os pontos quanto saúde e alimentação, sem julgamento."
+      <span>Viviane Airoldi, paciente</span>
+    </div>
+  </div>
+</section>
+
+<section id="servicos">
+  <div class="wrap">
+    <p class="kicker">Como atendo</p>
+    <h2 style="font-size:clamp(26px,3.4vw,38px);max-width:26ch">Cuidado com cada detalhe da sua saúde</h2>
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 2.8 3 3 0 0 0 1.5 5A3 3 0 0 0 8 19h1V4z"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 2.8 3 3 0 0 1-1.5 5A3 3 0 0 1 16 19h-1V4z"/></svg></div>
+        <h3>Sem julgamento</h3>
+        <p>Consulta acolhedora, como uma conversa leve, para trazer todos os pontos sobre saúde e alimentação.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M12 21c-4.5-3-8-6.5-8-11a5 5 0 0 1 8-4 5 5 0 0 1 8 4c0 4.5-3.5 8-8 11z"/></svg></div>
+        <h3>Cuidado em cada detalhe</h3>
+        <p>Consulta totalmente personalizada, com atenção próxima ao seu histórico e aos seus objetivos.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M13 3l-8 10h6l-2 8 9-11h-6z"/></svg></div>
+        <h3>Qualidade de vida</h3>
+        <p>Acompanhamento nutricional focado em resultados reais e sustentáveis no seu dia a dia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sobre" style="background:var(--paper-alt)">
+  <div class="wrap about-grid">
+    <div class="about-photo"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkfNRsRWT_bfHnFJsfZMpRHprMErY6Az61Te6jSpt5WvDNKf11QfstYQPChNVcXMlw1i1DPd1FUFk_Ht4B1TUeBLelXfjlWZKJFPb_7E3rAJdjw2e7pSnugIE1D6z6TY8sY92KWTA=w800" alt="Gabriella Irmão em atendimento"></div>
+    <div>
+      <p class="kicker">Sobre o atendimento</p>
+      <h2 style="font-size:clamp(24px,3vw,34px)">Nutricionista solícita e empática</h2>
+      <p style="color:var(--ink-soft);margin-top:14px">Atendimento no Centro Executivo Maxim's, no Centro de Florianópolis, reconhecido no Google como uma empresa de empreendedoras.</p>
+      <div class="info-row" style="margin-top:24px"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M12 21s-7-7.2-7-12a7 7 0 0 1 14 0c0 4.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.3"/></svg></div><div><b>Endereço</b><span>Centro Executivo Maxim's, Av. Rio Branco, 354, Centro, Florianópolis - SC, 88015-201</span></div></div>
+      <div class="amen-grid">
+        <div class="amen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="16" height="16"><circle cx="12" cy="6" r="3"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg>Acesso para cadeira de rodas</div>
+        <div class="amen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="16" height="16"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M2 10h20"/></svg>Cartão e pagamento por aproximação</div>
+        <div class="amen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="16" height="16"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg>Agendamento necessário</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="kicker">O que dizem as pacientes</p>
+    <h2 style="font-size:clamp(24px,3vw,32px)">Depoimentos reais no Google</h2>
+    <div class="testi-marquee">
+      <div class="testi-track">
+        <div class="testi-card"><div class="stars"><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg></div><p>"A Gabi é atenciosa, ser atendida por ela é como estar batendo papo leve e descontraído com uma amiga, onde nos sentimos seguras em trazer todos os pontos sobre saúde e alimentação, sem julgamento."</p><b>Viviane Airoldi</b></div>
+        <div class="testi-card"><div class="stars"><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg></div><p>"Uma profissional sensacional, paciente, educada, ética e até psicóloga. Amo o trabalho dela."</p><b>Rhuana Braz</b></div>
+        <div class="testi-card"><div class="stars"><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg></div><p>"A Gabi é uma profissional excelente. Faço acompanhamento com ela há mais de um ano e ela foi essencial para o meu desenvolvimento. É solícita, empática e trata da nutrição com muito cuidado e equilíbrio."</p><b>Isadora de Almeida</b></div>
+        <div class="testi-card"><div class="stars"><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg></div><p>"A Gabi é atenciosa, ser atendida por ela é como estar batendo papo leve e descontraído com uma amiga, onde nos sentimos seguras em trazer todos os pontos sobre saúde e alimentação, sem julgamento."</p><b>Viviane Airoldi</b></div>
+        <div class="testi-card"><div class="stars"><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg></div><p>"Uma profissional sensacional, paciente, educada, ética e até psicóloga. Amo o trabalho dela."</p><b>Rhuana Braz</b></div>
+        <div class="testi-card"><div class="stars"><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg></div><p>"A Gabi é uma profissional excelente. Faço acompanhamento com ela há mais de um ano e ela foi essencial para o meu desenvolvimento. É solícita, empática e trata da nutrição com muito cuidado e equilíbrio."</p><b>Isadora de Almeida</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="local" style="background:var(--paper-alt)">
+  <div class="wrap loc-grid">
+    <div class="loc-info">
+      <p class="kicker">Onde e como falar comigo</p>
+      <h2 style="font-size:clamp(24px,3vw,32px)">Atendimento no Centro de Florianópolis</h2>
+      <div class="info-row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M6.6 3.5h2.7a1 1 0 0 1 1 .8l.7 3a1 1 0 0 1-.3 1L9.2 9.7a12 12 0 0 0 5.1 5.1l1.4-1.5a1 1 0 0 1 1-.3l3 .7a1 1 0 0 1 .8 1v2.7a1 1 0 0 1-1.1 1C10.7 18 6 13.3 5.6 4.6a1 1 0 0 1 1-1.1z"/></svg></div><div><b>WhatsApp</b><span>(48) 99111-1597</span></div></div>
+      <div class="info-row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.5" fill="currentColor" stroke="none"/></svg></div><div><b>Instagram</b><span>@nutrigabriellairmao</span></div></div>
+      <div class="hours-grid">
+        <div><span>Segunda a sexta</span><b>08:30 - 20:00</b></div>
+        <div><span>Sábado e domingo</span><b>Fechado</b></div>
+      </div>
+      <a class="btn btn-primary" style="align-self:flex-start;margin-top:10px" href="https://wa.me/5548991111597?text=Ol%C3%A1%2C%20Gabriella!%20Vim%20pelo%20Google%20e%20quero%20agendar%20uma%20consulta" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+    </div>
+    <div class="map-wrap">
+      <iframe loading="lazy" src="https://www.google.com/maps?q=Av.+Rio+Branco,+354,+Centro,+Florianopolis+-+SC&output=embed" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap" style="max-width:820px">
+    <p class="kicker">Dúvidas frequentes</p>
+    <h2 style="font-size:clamp(24px,3vw,32px);margin-bottom:12px">Perguntas antes de agendar</h2>
+    <details class="faq-item" open>
+      <summary>O local tem acessibilidade?</summary>
+      <p>Sim: assento, banheiro, entrada e estacionamento com acessibilidade para pessoas em cadeira de rodas.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Preciso agendar com antecedência?</summary>
+      <p>Sim, é necessário fazer agendamento e recomendado marcar hora com antecedência.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Quais as formas de pagamento?</summary>
+      <p>Cartão de crédito, cartão de débito e pagamento por aproximação (NFC).</p>
+    </details>
+    <details class="faq-item">
+      <summary>Como agendo minha consulta?</summary>
+      <p>Pelo WhatsApp (48) 99111-1597, resposta em poucos minutos.</p>
+    </details>
+  </div>
+</section>
+
+<div class="cta-final">
+  <h2 style="font-size:clamp(26px,3.4vw,38px)">Pronta para uma consulta sem julgamento?</h2>
+  <p>Agende agora e comece um acompanhamento nutricional atencioso e personalizado.</p>
+  <a class="btn" style="background:#fff;color:var(--brand-dark)" href="https://wa.me/5548991111597?text=Ol%C3%A1%2C%20Gabriella!%20Vim%20pelo%20Google%20e%20quero%20agendar%20uma%20consulta" target="_blank" rel="noopener">Agendar consulta no WhatsApp</a>
+</div>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <div class="foot-brand">Gabriella Irmão</div>
+      <p style="font-size:14px;max-width:34ch">Nutrição personalizada no Centro de Florianópolis.</p>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <a href="https://wa.me/5548991111597" target="_blank" rel="noopener">(48) 99111-1597</a>
+      <a href="https://instagram.com/nutrigabriellairmao" target="_blank" rel="noopener">@nutrigabriellairmao</a>
+    </div>
+    <div>
+      <h4>Atendimento</h4>
+      <a href="#local">Centro, Florianópolis</a>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>&copy; 2026 Gabriella Irmão Nutricionista</span>
+    <span>Florianópolis, SC</span>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5548991111597?text=Ol%C3%A1%2C%20Gabriella!%20Vim%20pelo%20Google%20e%20quero%20agendar%20uma%20consulta" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.82L2 22l5.44-1.43a9.87 9.87 0 004.6 1.17h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.64-1.03-5.13-2.9-7-1.88-1.87-4.36-2.9-7.01-2.9zm5.8 14.2c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.12.11-1.8-.11-.42-.13-.95-.31-1.64-.6-2.88-1.24-4.76-4.13-4.9-4.32-.14-.19-1.17-1.56-1.17-2.98 0-1.42.74-2.11 1-2.4.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.42-.07.65.5.24.58.81 2 .88 2.15.07.15.12.32.02.51-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.02 1.12 1 2.06 1.31 2.35 1.46.29.15.46.13.63-.05.17-.18.72-.84.91-1.13.19-.29.38-.24.63-.14.26.1 1.66.78 1.94.92.29.14.48.21.55.33.07.12.07.68-.17 1.36z"/></svg>
+</a>
+<script>
+(function(){
+  var hd = document.querySelector('header');
+  if(!hd) return;
+  addEventListener('scroll', function(){ hd.classList.toggle('scrolled', scrollY > 40) }, {passive:true});
+})();
+</script>
+</body>
+</html>
