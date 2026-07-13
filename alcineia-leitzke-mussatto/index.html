@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alcinéia Leitzke Mussatto | Nutricionista em Joinville</title>
+<meta name="description" content="Alcinéia Leitzke Mussatto, nutricionista na Clínica RegenHub, Centro de Joinville. Avaliação nutricional completa e acompanhamento clínico. Nota 5.0 no Google, 40 avaliações.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#26292c;
+    --ink-soft:#5f666d;
+    --paper:#f7f9f9;
+    --paper-alt:#ecf1f1;
+    --line:#dde4e4;
+    --brand:#4f7d78;
+    --brand-dark:#2a4744;
+    --accent:#c4713f;
+    --accent-soft:#f2e0d1;
+    --wa:#25d366;
+    --radius:16px;
+    --shadow:0 12px 32px -12px rgba(38,41,44,.16);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',-apple-system,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,h4{font-family:'Fraunces',serif;font-weight:600;color:var(--ink);line-height:1.15;letter-spacing:-.01em}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+  section{padding:clamp(56px,9vw,120px) 0}
+  .kicker{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+  .faixa{background:var(--brand);color:#fff;padding:.9rem 0;overflow:hidden}
+  .marquee{display:flex;gap:0;width:max-content;animation:rolar 60s linear infinite}
+  .marquee span{display:inline-flex;align-items:center;gap:2.6rem;white-space:nowrap;font-weight:600;font-size:.94rem;letter-spacing:.02em}
+  .marquee .dot{color:var(--accent-soft)}
+  @keyframes rolar{to{transform:translateX(-12.5%)}}
+  @media(prefers-reduced-motion:reduce){.marquee{animation:none}}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 30px;border-radius:100px;font-weight:600;font-size:15px;transition:.2s;white-space:nowrap}
+  .btn-primary{background:var(--wa);color:#fff;box-shadow:0 8px 20px -6px rgba(37,211,102,.5)}
+  .btn-primary:hover{background:#1fb955;transform:translateY(-2px)}
+  .btn-cta{position:relative;overflow:hidden}
+  @media(prefers-reduced-motion:no-preference){.btn-cta{animation:ctaGlow 4.5s ease-in-out infinite}.btn-cta:hover{animation-play-state:paused}}
+  @keyframes ctaGlow{0%,100%{box-shadow:0 8px 20px -6px rgba(37,211,102,.5)}50%{box-shadow:0 12px 30px -6px rgba(37,211,102,.75)}}
+  .btn-cta::before{content:'';position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-18deg);transition:left .6s ease;pointer-events:none}
+  .btn-cta:hover::before{left:130%}
+  .btn-outline{border:1.5px solid var(--brand);color:var(--brand-dark)}
+  .btn-outline:hover{background:var(--brand);color:#fff}
+  .cta-sub{font-size:13px;color:var(--ink-soft);margin-top:10px}
+  header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(247,249,249,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);transition:box-shadow .35s ease}
+  header.scrolled{box-shadow:0 10px 30px -20px rgba(0,0,0,.25)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 24px;max-width:1180px;margin:0 auto}
+  .brand{display:flex;align-items:center;gap:10px;font-family:'Fraunces',serif;font-weight:600;font-size:18px}
+  nav.links{display:flex;gap:32px;font-size:14px;font-weight:500}
+  nav.links a:hover{color:var(--brand-dark)}
+  .nav-cta .btn{padding:11px 22px;font-size:14px}
+  @media(max-width:820px){nav.links{display:none}}
+  .hero{padding-top:calc(78px + clamp(48px,8vw,90px));position:relative;background:linear-gradient(180deg,var(--paper-alt) 0%,var(--paper) 60%)}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+  @media(max-width:900px){
+    .hero-grid{grid-template-columns:1fr;gap:40px}
+    .hero-grid>div:first-child{display:contents}
+    .hero .kicker{order:1}.hero h1{order:2}.hero p.lead{order:3}
+    .hero-photo{order:4}.hero-actions{order:5}.hero .cta-sub{order:6}
+  }
+  .hero h1{font-size:clamp(32px,4.6vw,50px)}
+  .hero p.lead{font-size:clamp(16px,1.6vw,19px);color:var(--ink-soft);margin:20px 0 30px;max-width:52ch}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+  .hero-photo{position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/5;transition:box-shadow .35s ease}
+  .hero-photo img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease,filter .35s ease}
+  .hero-photo::after{content:'';position:absolute;inset:0;border-radius:24px;box-shadow:inset 0 0 0 0 rgba(0,0,0,0);transition:box-shadow .35s ease;pointer-events:none}
+  .hero-photo:hover{box-shadow:0 20px 46px -14px rgba(196,113,63,.5),var(--shadow)}
+  .hero-photo:hover img{transform:scale(1.045);filter:saturate(1.12) brightness(1.03)}
+  .hero-photo:hover::after{box-shadow:inset 0 0 0 3px rgba(196,113,63,.55)}
+  .badge-float{position:absolute;left:-38px;bottom:24px;background-color:#fff;background-image:radial-gradient(circle at 1px 1px,rgba(0,0,0,.04) 1px,transparent 0);background-size:9px 9px;border-radius:14px;padding:14px 18px;box-shadow:var(--shadow),inset 0 1px 0 rgba(255,255,255,.7);display:flex;gap:12px;align-items:center;max-width:260px}
+  @media(max-width:900px){.badge-float{left:-12px}}
+  .badge-float .stars{color:var(--accent);display:inline-flex;gap:2px}
+  .badge-float strong{display:block;font-size:16px}
+  .badge-float span{font-size:12px;color:var(--ink-soft)}
+  .social-proof{background:var(--brand-dark);color:#eef2f1}
+  .social-proof .wrap{display:grid;grid-template-columns:.7fr 1.3fr;gap:48px;align-items:center}
+  @media(max-width:820px){.social-proof .wrap{grid-template-columns:1fr}}
+  .rating-block{text-align:center;background:rgba(255,255,255,.07);border-radius:20px;padding:36px 24px;border:1px solid rgba(255,255,255,.12)}
+  .rating-block .num{font-family:'Fraunces',serif;font-size:56px;font-weight:600}
+  .rating-block .stars{color:var(--accent);display:flex;justify-content:center;gap:4px;margin:6px 0}
+  .rating-block p{color:#c3cecc;font-size:14px}
+  .quote{font-size:clamp(18px,2vw,24px);font-family:'Fraunces',serif;font-style:italic;line-height:1.5}
+  .quote span{display:block;margin-top:16px;font-family:'Inter',sans-serif;font-style:normal;font-size:14px;color:#9aa8a5}
+  .pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+  @media(max-width:900px){.pillars-grid{grid-template-columns:1fr}}
+  .pillar-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px 28px;transition:.25s}
+  .pillar-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:transparent}
+  .pillar-card .icon{width:56px;height:56px;border-radius:14px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;color:var(--brand-dark);margin-bottom:14px}
+  .pillar-card h3{font-size:19px;margin-bottom:8px}
+  .pillar-card p{color:var(--ink-soft);font-size:14.5px}
+  .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
+  @media(max-width:900px){.about-grid{grid-template-columns:1fr}}
+  .about-photo{position:relative;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);transition:box-shadow .35s ease}
+  .about-photo img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease,filter .35s ease}
+  .about-photo::after{content:'';position:absolute;inset:0;border-radius:20px;box-shadow:inset 0 0 0 0 rgba(0,0,0,0);transition:box-shadow .35s ease;pointer-events:none}
+  .about-photo:hover{box-shadow:0 20px 46px -14px rgba(196,113,63,.5),var(--shadow)}
+  .about-photo:hover img{transform:scale(1.045);filter:saturate(1.12) brightness(1.03)}
+  .about-photo:hover::after{box-shadow:inset 0 0 0 3px rgba(196,113,63,.55)}
+  @keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+  @media(prefers-reduced-motion:no-preference){
+    .hero-photo,.about-photo{animation:floatY 5.5s ease-in-out infinite}
+    .about-photo{animation-delay:.4s}
+    .hero-photo:hover,.about-photo:hover{animation-play-state:paused}
+  }
+  .orn{display:flex;align-items:center;justify-content:center;gap:14px;opacity:.6;color:var(--brand);margin:8px 0 0}
+  .orn::before,.orn::after{content:'';height:1px;width:min(80px,15vw);background:currentColor}
+  .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+  @media(max-width:760px){.gallery-grid{grid-template-columns:1fr 1fr}}
+  .gallery-grid img{border-radius:14px;aspect-ratio:4/3;object-fit:cover;box-shadow:var(--shadow)}
+  .loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:stretch}
+  @media(max-width:900px){.loc-grid{grid-template-columns:1fr}}
+  .loc-info{display:flex;flex-direction:column;gap:22px}
+  .info-row{display:flex;gap:14px;align-items:flex-start}
+  .info-row .ic{width:40px;height:40px;border-radius:10px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--brand-dark)}
+  .info-row b{display:block;font-size:14px}
+  .info-row span{font-size:14px;color:var(--ink-soft)}
+  .map-wrap{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);min-height:320px}
+  .map-wrap iframe{width:100%;height:100%;min-height:320px;border:0}
+  .faq-item{border-bottom:1px solid var(--line);padding:22px 0}
+  .faq-item summary{cursor:pointer;font-weight:600;font-size:16px;display:flex;justify-content:space-between;align-items:center;list-style:none}
+  .faq-item summary::-webkit-details-marker{display:none}
+  .faq-item summary::after{content:'+';font-size:22px;color:var(--brand-dark);font-weight:400}
+  .faq-item[open] summary::after{content:'\2013'}
+  .faq-item p{margin-top:12px;color:var(--ink-soft);font-size:14.5px;max-width:70ch}
+  .cta-final{background:var(--brand-dark);color:#fff;text-align:center;border-radius:28px;max-width:1180px;margin:0 auto clamp(56px,8vw,96px);padding:clamp(48px,7vw,80px) 24px}
+  .cta-final h2{color:#fff}
+  .cta-final p{color:#dde4e4;margin:16px auto 30px;max-width:50ch}
+  footer{background:#1e332f;color:#c3cecc;padding:56px 0 28px}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px}
+  @media(max-width:700px){.foot-grid{grid-template-columns:1fr}}
+  .foot-brand{display:flex;align-items:center;gap:10px;font-family:'Fraunces',serif;font-size:18px;color:#fff;margin-bottom:12px}
+  footer h4{color:#fff;font-family:'Inter',sans-serif;font-size:13px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px}
+  footer a{font-size:14px;color:#c3cecc;display:block;margin-bottom:9px}
+  footer a:hover{color:#fff}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:36px;padding-top:22px;font-size:12.5px;color:#83928e;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  .wa-float{position:fixed;bottom:22px;right:22px;background:var(--wa);color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px -6px rgba(37,211,102,.6);z-index:90;opacity:0;transform:scale(0)}
+  @keyframes wa-pop{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+  @media(prefers-reduced-motion:no-preference){.wa-float{animation:wa-pop .5s ease 1.4s both}}
+  @media(prefers-reduced-motion:reduce){.wa-float{opacity:1;transform:scale(1)}}
+  .wa-float:hover{transform:scale(1.06)}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a href="#" class="brand">Alcinéia Mussatto</a>
+    <nav class="links">
+      <a href="#abordagem">Abordagem</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#local">Local</a>
+      <a href="#faq">Dúvidas</a>
+    </nav>
+    <div class="nav-cta"><a class="btn btn-primary" href="https://wa.me/5547996659060?text=Ol%C3%A1%2C%20Alcin%C3%A9ia!%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20consulta" target="_blank" rel="noopener">WhatsApp</a></div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="kicker">Nutricionista · Centro, Joinville</p>
+      <h1>Avaliação nutricional completa, com acompanhamento clínico próximo</h1>
+      <p class="lead">Atendimento na Clínica RegenHub, no Centro de Joinville, com plano alimentar baseado em avaliação real, não em tabela pronta.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-cta" href="https://wa.me/5547996659060?text=Ol%C3%A1%2C%20Alcin%C3%A9ia!%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20consulta" target="_blank" rel="noopener">Agendar consulta no WhatsApp</a>
+        <a class="btn btn-outline" href="#abordagem">Como funciona</a>
+      </div>
+      <p class="cta-sub">Resposta em poucos minutos</p>
+    </div>
+    <div class="hero-photo">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkUEVEFkcx6AZYphPCnFBl1H_Tdkc5Ia-OYGHnnf1wZ9qMpEhQzZFcBphIVqWDwPbsF-mUHUPBzouylTSj86G2YfVDX4VTzc6_HxyAUtlERUIoFiBLfvXqcKBKmQS3LcJ0dacR7azyhBLfY=w900" alt="Alcinéia Leitzke Mussatto, nutricionista em Joinville">
+      <div class="badge-float">
+        <span class="stars"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg></span>
+        <div><strong>5,0 · 40 avaliações</strong><span>no Google</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="faixa" aria-hidden="true">
+  <div class="marquee">
+    <span>Avaliação completa <b class="dot">✦</b> Acompanhamento próximo <b class="dot">✦</b> Clínica RegenHub <b class="dot">✦</b></span>
+    <span>Avaliação completa <b class="dot">✦</b> Acompanhamento próximo <b class="dot">✦</b> Clínica RegenHub <b class="dot">✦</b></span>
+    <span>Avaliação completa <b class="dot">✦</b> Acompanhamento próximo <b class="dot">✦</b> Clínica RegenHub <b class="dot">✦</b></span>
+    <span>Avaliação completa <b class="dot">✦</b> Acompanhamento próximo <b class="dot">✦</b> Clínica RegenHub <b class="dot">✦</b></span>
+    <span>Avaliação completa <b class="dot">✦</b> Acompanhamento próximo <b class="dot">✦</b> Clínica RegenHub <b class="dot">✦</b></span>
+    <span>Avaliação completa <b class="dot">✦</b> Acompanhamento próximo <b class="dot">✦</b> Clínica RegenHub <b class="dot">✦</b></span>
+    <span>Avaliação completa <b class="dot">✦</b> Acompanhamento próximo <b class="dot">✦</b> Clínica RegenHub <b class="dot">✦</b></span>
+    <span>Avaliação completa <b class="dot">✦</b> Acompanhamento próximo <b class="dot">✦</b> Clínica RegenHub <b class="dot">✦</b></span>
+  </div>
+</div>
+
+<section class="social-proof">
+  <div class="wrap">
+    <div class="rating-block">
+      <div class="num">5,0</div>
+      <div class="stars"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg></div>
+      <p>40 avaliações no Google</p>
+    </div>
+    <div class="quote">"Avaliação antropométrica completa antes de qualquer plano, com retorno pra ajustar o que for preciso."
+      <span>Sobre o método de atendimento</span>
+    </div>
+  </div>
+</section>
+
+<section id="abordagem">
+  <div class="wrap">
+    <p class="kicker">Como funciona o acompanhamento</p>
+    <h2 style="font-size:clamp(26px,3.4vw,38px);max-width:24ch">Avaliação de verdade antes do plano alimentar</h2>
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
+        <h3>Avaliação completa</h3>
+        <p>Antropometria e histórico real antes de qualquer prescrição, pra entender o ponto de partida certo.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 2.8 3 3 0 0 0 1.5 5A3 3 0 0 0 8 19h1V4z"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 2.8 3 3 0 0 1-1.5 5A3 3 0 0 1 16 19h-1V4z"/></svg></div>
+        <h3>Plano individual</h3>
+        <p>Prescrição a partir do que a avaliação mostrou, não de fórmula padrão aplicada a todo mundo.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.3 2"/></svg></div>
+        <h3>Acompanhamento próximo</h3>
+        <p>Retornos pra ajustar o plano conforme a resposta do seu corpo, na Clínica RegenHub, Centro de Joinville.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sobre" style="background:var(--paper-alt)">
+  <div class="wrap about-grid">
+    <div class="about-photo"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn4XQ4Jl3YP5Q9_MjmGmXODBxjUonS7W2qTZuALTYN8qR_KNmkyx-y2GQoxQMGwy8rl9S0b53juEa1qZTmsomBfogeXvJSc2YvfCoSJ8Vb__MNpcjPccXZ8Ohe3fI4ZrchbLDCa=w800" alt="Alcinéia Leitzke Mussatto em consulta"></div>
+    <div>
+      <p class="kicker">Sobre a Alcinéia</p>
+      <h2 style="font-size:clamp(24px,3vw,34px)">Atendimento na Clínica RegenHub, no Centro de Joinville</h2>
+      <p style="color:var(--ink-soft);margin-top:16px;max-width:56ch">Nutricionista com consultório na Clínica RegenHub, no Edifício Adville, Centro de Joinville. O acompanhamento parte de avaliação antropométrica real, com retornos pra ajustar o plano conforme os resultados aparecem.</p>
+      <div class="orn">✦</div>
+      <p style="text-align:center;font-family:'Fraunces',serif;font-style:italic;color:var(--brand-dark);font-size:17px;margin-top:8px">"Avaliação real, plano individual, acompanhamento até o resultado."</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="kicker">No consultório</p>
+    <h2 style="font-size:clamp(24px,3vw,32px)">Um pouco do atendimento</h2>
+    <div class="gallery-grid">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkVgIMK849NvPdQJBwNSGrv8PLtsgu3kziw3fOAUIKRi_oTYktqJzmF2gXnX8jF5AVxKgHbgMX12jhY3g1UriK_fhP38bSaExvnDa938-RAwjydmn_328Cu9IxESHUCMDG1se0=w700" alt="Alcinéia Mussatto na clínica">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmPsNVaZyiNJLHNNzI-ut5jNazZwQqZqkntLElf_JCpGM-cPQRVyZGCuHADrctGiKsP-kRG8R8Kyz5DPZBnTrH2rIXIda0FJRIENbMX_HB73NtSxSiorqCNhxLOxwh3ZPgE7YHU=w700" alt="Sala de atendimento Clínica RegenHub">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkuzZhpKJ75hzemaqawbhvuCYm1JeVahwTvb6XlXyQ_l0XNzNgCa8YPo7AhiHoShPWBLXp3a7-XUHiJ8jaRnnT4JUEzZvtJsTqFEzfIMuXGDvavK_IN68GTue_KzBFUJ-xoWDI=w700" alt="Avaliação antropométrica com Alcinéia Mussatto">
+    </div>
+  </div>
+</section>
+
+<section id="local" style="background:var(--paper-alt)">
+  <div class="wrap loc-grid">
+    <div class="loc-info">
+      <p class="kicker">Onde e como falar comigo</p>
+      <h2 style="font-size:clamp(24px,3vw,32px)">Atendimento no Centro de Joinville</h2>
+      <div class="info-row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M12 21s-7-7.2-7-12a7 7 0 0 1 14 0c0 4.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.3"/></svg></div><div><b>Endereço</b><span>Clínica RegenHub, Ed. Adville, R. Blumenau, 64, Sl 1402, Centro, Joinville, SC</span></div></div>
+      <div class="info-row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.3 2"/></svg></div><div><b>Horário</b><span>Abre às 8h30 de terça a sábado</span></div></div>
+      <div class="info-row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M6.6 3.5h2.7a1 1 0 0 1 1 .8l.7 3a1 1 0 0 1-.3 1L9.2 9.7a12 12 0 0 0 5.1 5.1l1.4-1.5a1 1 0 0 1 1-.3l3 .7a1 1 0 0 1 .8 1v2.7a1 1 0 0 1-1.1 1C10.7 18 6 13.3 5.6 4.6a1 1 0 0 1 1-1.1z"/></svg></div><div><b>WhatsApp</b><span>(47) 99665-9060</span></div></div>
+      <a class="btn btn-primary" style="align-self:flex-start" href="https://wa.me/5547996659060?text=Ol%C3%A1%2C%20Alcin%C3%A9ia!%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20consulta" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+    </div>
+    <div class="map-wrap">
+      <iframe loading="lazy" src="https://www.google.com/maps?q=R.+Blumenau,+64,+Centro,+Joinville+-+SC&output=embed" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap" style="max-width:820px">
+    <p class="kicker">Dúvidas frequentes</p>
+    <h2 style="font-size:clamp(24px,3vw,32px);margin-bottom:12px">Perguntas antes de agendar</h2>
+    <details class="faq-item" open>
+      <summary>Como é a primeira consulta?</summary>
+      <p>Começa com uma avaliação antropométrica completa e um levantamento do seu histórico, antes de qualquer plano alimentar.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Onde fica o consultório?</summary>
+      <p>Na Clínica RegenHub, Edifício Adville, R. Blumenau, 64, Sala 1402, Centro de Joinville.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Vou ter retornos pra ajustar o plano?</summary>
+      <p>Sim, o acompanhamento inclui retornos pra reavaliar e ajustar conforme os resultados.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Como agendo minha consulta?</summary>
+      <p>Pelo WhatsApp (47) 99665-9060, resposta em poucos minutos.</p>
+    </details>
+  </div>
+</section>
+
+<div class="cta-final">
+  <h2 style="font-size:clamp(26px,3.4vw,38px)">Pronta pra uma avaliação nutricional completa?</h2>
+  <p>Agende sua consulta na Clínica RegenHub e comece um acompanhamento próximo, de verdade.</p>
+  <a class="btn" style="background:#fff;color:var(--brand-dark)" href="https://wa.me/5547996659060?text=Ol%C3%A1%2C%20Alcin%C3%A9ia!%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20consulta" target="_blank" rel="noopener">Agendar consulta no WhatsApp</a>
+</div>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <div class="foot-brand">Alcinéia Mussatto</div>
+      <p style="font-size:14px;max-width:34ch">Nutricionista na Clínica RegenHub, Centro de Joinville.</p>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <a href="https://wa.me/5547996659060" target="_blank" rel="noopener">(47) 99665-9060</a>
+    </div>
+    <div>
+      <h4>Atendimento</h4>
+      <a href="#local">Centro</a>
+      <a href="#local">Joinville, SC</a>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© 2026 Alcinéia Leitzke Mussatto Nutricionista</span>
+    <span>Joinville, SC</span>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5547996659060?text=Ol%C3%A1%2C%20Alcin%C3%A9ia!%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20consulta" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.82L2 22l5.44-1.43a9.87 9.87 0 004.6 1.17h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.64-1.03-5.13-2.9-7-1.88-1.87-4.36-2.9-7.01-2.9zm5.8 14.2c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.12.11-1.8-.11-.42-.13-.95-.31-1.64-.6-2.88-1.24-4.76-4.13-4.9-4.32-.14-.19-1.17-1.56-1.17-2.98 0-1.42.74-2.11 1-2.4.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.42-.07.65.5.24.58.81 2 .88 2.15.07.15.12.32.02.51-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.02 1.12 1 2.06 1.31 2.35 1.46.29.15.46.13.63-.05.17-.18.72-.84.91-1.13.19-.29.38-.24.63-.14.26.1 1.66.78 1.94.92.29.14.48.21.55.33.07.12.07.68-.17 1.36z"/></svg>
+</a>
+<script>
+(function(){
+  var hd = document.querySelector('header');
+  if(!hd) return;
+  addEventListener('scroll', function(){ hd.classList.toggle('scrolled', scrollY > 40) }, {passive:true});
+})();
+</script>
+</body>
+</html>
